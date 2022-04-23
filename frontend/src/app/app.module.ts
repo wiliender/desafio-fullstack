@@ -19,6 +19,7 @@ import { DispositivosCrudComponent } from './views/dispositivos-crud/dispositivo
 import { RedDirective } from './directives/red.directive';
 import { CategoriasCreateComponent } from './components/categorias/categorias-create/categorias-create.component';
 import { DispositivosCreateComponent } from './components/dispositivos/dispositivos-create/dispositivos-create.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { DispositivosCreateComponent } from './components/dispositivos/dispositi
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
