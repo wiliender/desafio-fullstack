@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-categorias-crud',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriasCrudComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  navigateToCategoriasCreate(): void {
+    this.router.navigate(['/categorias/create']);
+  }
 }
