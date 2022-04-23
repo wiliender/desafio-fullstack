@@ -20,6 +20,7 @@ import { RedDirective } from './directives/red.directive';
 import { CategoriasCreateComponent } from './components/categorias/categorias-create/categorias-create.component';
 import { DispositivosCreateComponent } from './components/dispositivos/dispositivos-create/dispositivos-create.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
