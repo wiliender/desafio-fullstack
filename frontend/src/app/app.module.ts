@@ -16,6 +16,9 @@ import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
 import { CategoriasCrudComponent } from './views/categorias-crud/categorias-crud.component';
 import { DispositivosCrudComponent } from './views/dispositivos-crud/dispositivos-crud.component';
+import { RedDirective } from './directives/red.directive';
+import { CategoriasCreateComponent } from './components/categorias/categorias-create/categorias-create.component';
+import { DispositivosCreateComponent } from './components/dispositivos/dispositivos-create/dispositivos-create.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { DispositivosCrudComponent } from './views/dispositivos-crud/dispositivo
     NavComponent,
     HomeComponent,
     CategoriasCrudComponent,
-    DispositivosCrudComponent
+    DispositivosCrudComponent,
+    RedDirective,
+    CategoriasCreateComponent,
+    DispositivosCreateComponent
   ],
   imports: [
     BrowserModule,
