@@ -21,6 +21,12 @@ import { CategoriasCreateComponent } from './components/categorias/categorias-cr
 import { DispositivosCreateComponent } from './components/dispositivos/dispositivos-create/dispositivos-create.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
+
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { CategoriasReadComponent } from './components/categorias/categorias-read/categorias-read.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +39,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     DispositivosCrudComponent,
     RedDirective,
     CategoriasCreateComponent,
-    DispositivosCreateComponent
+    DispositivosCreateComponent,
+    CategoriasReadComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +51,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
