@@ -6,7 +6,7 @@ import { Directive, ElementRef } from '@angular/core';
 export class RedDirective {
 
   constructor(private el: ElementRef) { 
-    el.nativeElement.style.color = 'rgb(240, 56, 56)';
+    el.nativeElement.style.color = 'rgba(46,171,163,255)';
   }
 
 }
