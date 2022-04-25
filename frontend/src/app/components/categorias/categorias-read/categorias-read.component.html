@@ -1,6 +1,25 @@
-<ul>
-    teste
+<!-- <ul>
+    
     <li *ngFor="let categorias of categorias">
        {{ categorias.id}} => {{ categorias.name }}
     </li>
-</ul>
+</ul> -->
+
+<div class="mat-elevation-z4">
+    <table mat-table matSort [dataSource]="categorias">
+      <!-- Id Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+        <td mat-cell *matCellDef="let row">{{row.id}}</td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+        <td mat-cell *matCellDef="let row">{{row.name}}</td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
