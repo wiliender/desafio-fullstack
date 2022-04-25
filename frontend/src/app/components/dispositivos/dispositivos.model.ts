@@ -1,7 +1,7 @@
-import { Categoria } from './../categorias/categorias.model';
+import { Categorias } from './../categorias/categorias.model';
 export interface Dispositivos {
     id: number;
-    Categoria: Categoria;
+    Categoria: Categorias;
     color: string;
     partNumber: number;
 }
