@@ -1,3 +1,5 @@
+import { CategoriasDeleteComponent } from './components/categorias/categorias-delete/categorias-delete.component';
+import { CateogirasUpdateComponent } from './components/categorias/cateogiras-update/cateogiras-update.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component'
@@ -23,6 +25,12 @@ const routes: Routes = [
   },{
     path: 'dispositivos/create',
     component: DispositivosCreateComponent
+  },{
+    path: 'categorias/update/:id',
+    component: CateogirasUpdateComponent
+  },{
+    path: 'categorias/delete/:id',
+    component: CategoriasDeleteComponent
   }
 ];
 
