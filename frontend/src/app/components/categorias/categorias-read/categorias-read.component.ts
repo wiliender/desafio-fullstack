@@ -10,7 +10,7 @@ import { Categorias } from '../categorias.model';
 export class CategoriasReadComponent implements OnInit {
 
   categorias!: Categorias[];
-  displayedColumns = ['id', 'name']
+  displayedColumns = ['id', 'name', 'action']
 
   constructor(private categoriasService: CategoriasService) { }
 
@@ -20,5 +20,4 @@ export class CategoriasReadComponent implements OnInit {
       console.log(categorias)
     })
   }
-
 }
