@@ -47,6 +47,8 @@
    ✔ - Instale as dependências do projeto utilizando o comando "npm install . " ou "npm i".  <br>
    ✔ - Faça a conexão com um servidor, exporte as migrations com o comando "knex migrate:latest". <br>
    ✔ - Após a instalação, inicie o projeto utilizando o comando "npm start" no backend e no frontend. <br>
+   ✔ - Frontend http://localhost:4200/
+   ✔ - Backend http://localhost:3000/
    ✔ - Projeto iniciado com sucesso.  <br>
 
   
