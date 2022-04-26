@@ -30,5 +30,20 @@ export class CategoriasService {
   read(): Observable<Categorias[]> {
     return this.http.get<Categorias[]>(this.url)
   }
+
+  readById(id: string): Observable<Categorias> {
+    const url = `${this.url}/${id}`
+    return this.http.get<Categorias>(url)
+  }
+
+  update(categorias: Categorias): Observable<Categorias> {
+    const url = `${this.url}/update/${categorias.id}`
+    return this.http.put<Categorias>(url, categorias)
+  }
+
+  delete(id: number): Observable<Categorias> {
+    const url = `${this.url}/delete/${id}`
+    return this.http.delete<Categorias>(url)
+  }
 }
 
