@@ -30,6 +30,8 @@ import { CategoriasReadComponent } from './components/categorias/categorias-read
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { CateogirasUpdateComponent } from './components/categorias/cateogiras-update/cateogiras-update.component';
+import { CategoriasDeleteComponent } from './components/categorias/categorias-delete/categorias-delete.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { MatSortModule } from '@angular/material/sort';
     RedDirective,
     CategoriasCreateComponent,
     DispositivosCreateComponent,
-    CategoriasReadComponent
+    CategoriasReadComponent,
+    CateogirasUpdateComponent,
+    CategoriasDeleteComponent
   ],
   imports: [
     BrowserModule,
