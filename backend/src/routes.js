@@ -45,4 +45,21 @@ routes.delete('/categorias/delete/:id', async (req, res) => {
     return res.status(204).send();
 });
 
+///////////////////////////////////////Dispositivos/////////////////////////////////////////////
+
+routes.post('/dispositivos', async (req, res) => {
+    const { id, categorias, color, partNumber } = req.body;
+
+    await connection('dispositivos').insert({
+        id,
+        categorias,
+        color,
+        partNumber
+    })
+
+    return res.json({ id });
+});
+
+
+
 module.exports = routes;
