@@ -22,8 +22,7 @@ routes.get('/categorias', async (req, res) => {
 routes.get('/categorias/:id', async (req, res) => {
     const { id } = req.params;
 
-    const categorias = await connection('categorias').where('id', id).first;
-
+    const categorias = await connection('categorias').where('id', id).first();
     return res.json(categorias);
 });
 

@@ -23,7 +23,7 @@ export class CateogirasUpdateComponent implements OnInit {
     }
     this.categoriasService.readById(id).subscribe(categorias => {
       this.categorias = categorias;
-      this.name = this.categorias.name;
+      this.name = this.categorias.name;     
     });
   }
 
