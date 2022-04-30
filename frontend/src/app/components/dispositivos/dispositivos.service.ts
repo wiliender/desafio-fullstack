@@ -22,6 +22,25 @@ export class DispositivosService {
   }
 
   create(dispositivos: Dispositivos): Observable<Dispositivos> {
+    console.log(dispositivos)
     return this.http.post<Dispositivos>(this.url, dispositivos)
   }
+
+  read(): Observable<Dispositivos[]> {
+    return this.http.get<Dispositivos[]>(this.url)
+  }
+
+  readById(id: string): Observable<Dispositivos> {
+    const url = `${this.url}/${id}`
+    return this.http.get<Dispositivos>(url)
+  }
+
+  delete(id: number): Observable<Dispositivos> {
+    const url = `${this.url}/delete/${id}`
+    return this.http.delete<Dispositivos>(url)
+  }
 }
+
+
+
+
