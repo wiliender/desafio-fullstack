@@ -1,7 +1,8 @@
-import { Router, ActivatedRoute } from '@angular/router';
-import { CategoriasService } from './../categorias.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
 import { Categorias } from '../categorias.model';
+import { CategoriasService } from './../categorias.service';
 
 @Component({
   selector: 'app-categorias-delete',
