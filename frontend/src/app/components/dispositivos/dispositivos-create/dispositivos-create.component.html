@@ -1,5 +1,32 @@
-
-<button mat-raised-button (click)="createDispositivos()" color="primary">
+<mat-card>
+    <mat-card-title>
+        <h2>Novo Dispositivos</h2>
+    </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Cor do Dispositivo" 
+                [(ngModel)]="dispositivos.color" name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Numero de Serie do Dispositivo" 
+                [(ngModel)]="dispositivos.partNumber" name="partNumber">
+        </mat-form-field>
+    </form>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <i class="material-icons">
+        category
+    </i>
+    Categorias
+        
+      </button>
+      <mat-menu #menu="matMenu">
+        <button (click)="adicionarCateogira(cat)" mat-menu-item *ngFor="let cat of categorias">
+            <span>
+                {{ cat.name }}
+            </span>
+        </button>
+      </mat-menu>
+<br><button mat-raised-button (click)="createDispositivos()" color="primary">
     Salvar
 </button>
 
