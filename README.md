@@ -9,6 +9,12 @@
 </div>
 
 ##
+
+<div align="center">
+  <img id="device_management.gif" src="device_management.gif" alt="">
+</div>
+
+##
  
 <div >
   
