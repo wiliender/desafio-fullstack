@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-title>
+        <h2>Excluir Dispositivo</h2>
+    </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome do dispositivo" 
+                [value]="dispositivos.id" name="id" disabled>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="deleteDispositivos()" color="warn">
+        Excluir
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
