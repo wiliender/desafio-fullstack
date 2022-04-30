@@ -5,7 +5,9 @@ exports.up = function(knex) {
     table.string('color', 16).notNullable();
     table.integer('partNumber').notNullable();
 
-    table.integer('categoria_id').unsigned().references('id').inTable('categorias');
+    table.integer('categoria_id').unsigned();
+
+    table.foreign('categoria_id').references('id').inTable('categorias');
 
     });
 };
