@@ -9,10 +9,10 @@ module.exports = {
     client: 'mysql',
     connection: {
       filename: './src/database/db.mysql',
-        host : '127.0.0.1',
+        host : process.env.MYSQL_HOST,
         port : 3306,
         user : 'root',
-        password : 'password',
+        password : process.env.MYSQL_PASSWORD,
         database : 'desafio',
     },
     migrations: {
