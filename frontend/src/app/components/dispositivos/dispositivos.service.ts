@@ -1,16 +1,17 @@
-import { Dispositivos } from './dispositivos.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
+import { Dispositivos } from './dispositivos.model';
+
 @Injectable({
   providedIn: 'root'
 })
 export class DispositivosService {
 
-  url = `${environment.API}/dispositivos`
+  url = `${environment.API}dispositivos`
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 

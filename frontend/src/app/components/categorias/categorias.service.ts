@@ -12,7 +12,7 @@ import { Categorias } from './categorias.model'
 })
 export class CategoriasService {
 
-  url = `${environment.API}/categorias`
+  url = `${environment.API}categorias`
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 

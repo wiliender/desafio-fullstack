@@ -4,7 +4,7 @@ const routes = express.Router();
 
 routes.get('/status', async (req, res) => {
 
-    return res.status(200);
+    return res.status(200).json();
 });
 
 routes.post('/categorias', async (req, res) => {
@@ -49,8 +49,11 @@ routes.put('/categorias/update/:id', async (req, res) => {
 
 routes.delete('/categorias/delete/:id', async (req, res) => {
     const { id } = req.params;
-    
-    if (dispositivos > 0) {
+    const dispositivos = await connection('dispositivos').select('*');
+    const filtedispositivos = dispositivos.filter(dispositivo => dispositivo.id === id);
+
+
+    if (filtedispositivos.length > 0) {
         return res.status(400).send('Categoria possui dispositivos associados');
     }
     await connection('categorias').where('id', id).delete();
