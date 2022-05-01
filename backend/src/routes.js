@@ -2,6 +2,11 @@ const express = require('express');
 const connection = require('./database/connection');
 const routes = express.Router();
 
+routes.get('/status', async (req, res) => {
+
+    return res.status(200);
+});
+
 routes.post('/categorias', async (req, res) => {
     const { id, name } = req.body;
 

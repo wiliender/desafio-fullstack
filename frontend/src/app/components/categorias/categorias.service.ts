@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -11,7 +12,7 @@ import { Categorias } from './categorias.model'
 })
 export class CategoriasService {
 
-  url = 'http://localhost:3000/categorias'
+  url = `${environment.API}/categorias`
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
