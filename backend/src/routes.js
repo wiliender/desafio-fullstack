@@ -50,15 +50,18 @@ routes.put('/categorias/update/:id', async (req, res) => {
 routes.delete('/categorias/delete/:id', async (req, res) => {
     const { id } = req.params;
     const dispositivos = await connection('dispositivos').select('*');
-    const filtedispositivos = dispositivos.filter(dispositivo => dispositivo.id === id);
-
-
-    if (filtedispositivos.length > 0) {
-        return res.status(400).send('Categoria possui dispositivos associados');
+    const filtedispositivos = dispositivos.filter(dispositivo => dispositivo.categoria_id === parseInt(id));
+    
+    try{
+        if (filtedispositivos.length > 0) {
+            return res.status(405).send('Categoria possui dispositivos associados');
+        }
+        await connection('categorias').where('id', id).delete();
+    
+        return res.status(204).send();
+    }catch(error){
+        return res.status(405).send('Categoria possui dispositivos associados');
     }
-    await connection('categorias').where('id', id).delete();
-
-    return res.status(204).send();
 });
 
 ///////////////////////////////////////Dispositivos/////////////////////////////////////////////
